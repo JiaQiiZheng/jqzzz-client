@@ -20,7 +20,7 @@ function createImgSrcCode() {
 
 export default function loopLoadImages() {
   const url_arr = createImgSrcCode();
-  console.log(url_arr);
+  // console.log(url_arr);
   const all = url_arr.map((img) => {
     return (
       <Zoom>
