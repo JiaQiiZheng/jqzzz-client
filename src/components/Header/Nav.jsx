@@ -5,7 +5,6 @@ export default function Nav() {
   return (
     <nav className="App-nav">
       <i className="icon"></i>
-      <div>Search</div>
       <ul className="Menu">
         <li>
           <Link to="/" className="menuText">
@@ -38,25 +37,11 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/todo" className="menuText">
-            Todo
+          <Link to="/post" className="menuText">
+            Post
           </Link>
         </li>
       </ul>
-      <div>
-        <ul>
-          <li>
-            <Link to="/auth" className="menuText">
-              Log In
-            </Link>
-          </li>
-          <li>
-            <Link to="/register" className="menuText">
-              Sign Up
-            </Link>
-          </li>
-        </ul>
-      </div>
     </nav>
   );
 }

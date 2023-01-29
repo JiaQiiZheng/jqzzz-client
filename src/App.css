@@ -96,25 +96,24 @@ p {
 }
 
 .header {
+  position: fixed;
+  height: 100%;
+  display: flex;
+  transition: var(--transitionTime);
+}
+
+.header-layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-  position: fixed;
-  padding: 1rem;
-  transition: var(--transitionTime);
   transform: translateX(0%);
+  justify-content: space-between;
+  padding: 2rem;
 }
 
 .header:hover {
   background-color: var(--backgroundColor);
   transform: translateX(5%);
   transition: var(--transitionTime);
-}
-
-.header .App-header {
-  align-items: flex-start;
-  top: 1rem;
 }
 
 .atelierZZZ {
@@ -134,21 +133,12 @@ p {
   cursor: pointer;
 } */
 
-.App-nav {
-  display: flex;
-  flex-direction: column;
-  bottom: 1rem;
-}
-
-.App-nav .Menu {
+.Menu {
   color: var(--mainFontColor);
   font-weight: 100;
   font-size: 20px;
   text-transform: uppercase;
-}
-
-.App-nav .Menu li {
-  color: var(--mainColor);
+  list-style-type: none;
 }
 
 .section_story {
@@ -188,7 +178,7 @@ p {
 }
 
 .home_img {
-  width: 100vw;
+  width: calc(100vw - 1.5rem);
   filter: blur(10px);
   z-index: -999;
 }
