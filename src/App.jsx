@@ -7,8 +7,6 @@ import Home from "./components/Home/App";
 import About from "./components/About/App";
 import Works from "./components/Work/App";
 import Work_Apalachicola from "./components/Work/Work_Apalachicola";
-import Post from "./components/Post/Post";
-import LearnReducer from "./components/LearnReducer/App";
 
 export default function App() {
   return (
@@ -24,8 +22,6 @@ export default function App() {
             <Route index element={<Works />} />
             <Route path="work_Apalachicola" element={<Work_Apalachicola />} />
           </Route>
-          <Route path="post" element={<Post />} />
-          <Route path="learnReducer" element={<LearnReducer />} />
         </Routes>
       </div>
     </div>
