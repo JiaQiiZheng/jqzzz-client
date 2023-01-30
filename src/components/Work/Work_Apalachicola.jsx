@@ -1,7 +1,6 @@
 import React from "react";
 import LoopLoadImages from "../../actions/LoopLoadImages";
 import data from "../../data/work_data/data";
-import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 const dataSet = data[0];
