@@ -22,6 +22,7 @@ export default function App() {
             <Route index element={<Works />} />
             <Route path="work_Apalachicola" element={<Work_Apalachicola />} />
           </Route>
+          {/* <Route path="posts" element={<Posts />}></Route> */}
         </Routes>
       </div>
     </div>

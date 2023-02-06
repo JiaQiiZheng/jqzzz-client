@@ -37,7 +37,7 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/post" className="menuText">
+          <Link to="/posts" className="menuText">
             Post
           </Link>
         </li>

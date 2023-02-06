@@ -1,7 +1,7 @@
 import React from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import * as api from "../api/axios.js";
+import testImg from "../images/works/Apalachicola_Aquaculture/compressed/A1_collage.jpg";
 
 const contextString = import.meta.glob([
   "/src/images/works/Apalachicola_Aquaculture/compressed/*.jpg",
@@ -14,20 +14,18 @@ function createImgSrcCode() {
     var imageUrl = new URL(path, import.meta.url).href;
     imageUrl_arr.push(imageUrl);
   }
-
+  // console.log(imageUrl_arr);
   return imageUrl_arr;
 }
 
-const test = api.fetchImages();
-
 export default function loopLoadImages() {
   const url_arr = createImgSrcCode();
-  console.log(url_arr);
-
   const all = url_arr.map((img) => {
+    let projectImg = new URL(img, import.meta.url).href;
+    console.log(projectImg);
     return (
       <Zoom>
-        <img src={img} alt="image" />
+        <img src={projectImg} alt="image" />
       </Zoom>
     );
   });
