@@ -4,8 +4,8 @@ import "react-medium-image-zoom/dist/styles.css";
 import testImg from "../images/works/Apalachicola_Aquaculture/compressed/A1_collage.jpg";
 
 const contextString = import.meta.glob([
-  "/src/images/works/Apalachicola_Aquaculture/compressed/*.jpg",
-  "/src/images/works/Apalachicola_Aquaculture/compressed/*.png",
+  "../images/works/Apalachicola_Aquaculture/compressed/*.jpg",
+  "../images/works/Apalachicola_Aquaculture/compressed/*.png",
 ]);
 
 function createImgSrcCode() {
@@ -21,11 +21,12 @@ function createImgSrcCode() {
 export default function loopLoadImages() {
   const url_arr = createImgSrcCode();
   const all = url_arr.map((img) => {
-    let projectImg = new URL(img, import.meta.url).href;
-    console.log(projectImg);
+    // let projectImgUrl = new URL(img, import.meta.url).href;
+    // console.log(projectImgUrl);
+    console.log(img);
     return (
       <Zoom>
-        <img src={projectImg} alt="image" />
+        <img src={img} alt="image" />
       </Zoom>
     );
   });
