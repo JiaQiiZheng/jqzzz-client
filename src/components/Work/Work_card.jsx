@@ -6,6 +6,7 @@ export default function work_card(props) {
     `../../images/${props.card_image}`,
     import.meta.url
   ).href;
+  console.log(card_image_src);
   let workLink = "/works/" + `${props.title}`;
   return (
     <Link to={workLink}>
