@@ -4,8 +4,8 @@ import "react-medium-image-zoom/dist/styles.css";
 import testImg from "../images/works/Apalachicola_Aquaculture/compressed/A1_collage.jpg";
 
 const contextString = import.meta.glob([
-  "../images/works/Apalachicola_Aquaculture/compressed/*.jpg",
-  "../images/works/Apalachicola_Aquaculture/compressed/*.png",
+  "/src/images/works/Apalachicola_Aquaculture/compressed/*.jpg",
+  "/src/images/works/Apalachicola_Aquaculture/compressed/*.png",
 ]);
 
 function createImgSrcCode() {
