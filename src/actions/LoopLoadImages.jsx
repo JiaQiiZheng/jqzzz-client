@@ -1,6 +1,7 @@
 import React from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import testImg from "../../src/images/works/Apalachicola_Aquaculture/compressed/B1_mapLayout.png";
 
 const contextString = import.meta.glob([
   "/src/images/works/Apalachicola_Aquaculture/compressed/*.jpg",
@@ -22,8 +23,8 @@ export default function loopLoadImages() {
     let projectImgUrl = new URL(img, import.meta.url).href;
     return (
       <Zoom>
-        <pre>{projectImgUrl}</pre>
-        <img src={projectImgUrl} className="projectImg" alt="image" />
+        <pre>{testImg}</pre>
+        <img src={testImg} className="projectImg" alt="image" />
       </Zoom>
     );
   });
