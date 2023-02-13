@@ -12,9 +12,9 @@ function createImgSrcCode() {
   var imageUrl_arr = [];
   for (var path in contextString) {
     var imageUrl = new URL(path, import.meta.url).href;
-    imageUrl_arr.push(imageUrl);
+    const imageName = imageUrl.split("/").pop();
+    imageUrl_arr.push(imageName);
   }
-  // console.log(imageUrl_arr);
   return imageUrl_arr;
 }
 
@@ -23,10 +23,10 @@ export default function loopLoadImages() {
   const all = url_arr.map((img) => {
     // let projectImgUrl = new URL(img, import.meta.url).href;
     // console.log(projectImgUrl);
-    console.log(img);
+    const imageAssetPath = `/assets/${img}`;
     return (
       <Zoom>
-        <img src={img} alt="image" />
+        <img src={imageAssetPath} alt="image" />
       </Zoom>
     );
   });
