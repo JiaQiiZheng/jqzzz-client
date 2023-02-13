@@ -24,8 +24,8 @@ export default function loopLoadImages() {
     let testImgUrl = new URL(testImg, import.meta.url).href;
     return (
       <Zoom>
-        <pre>{testImgUrl}</pre>
-        <img src={testImgUrl} className="projectImg" alt="image" />
+        <pre>{projectImgUrl}</pre>
+        <img src={projectImgUrl} className="projectImg" alt="image" />
       </Zoom>
     );
   });
