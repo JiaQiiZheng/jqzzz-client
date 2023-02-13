@@ -28,7 +28,7 @@ export default [
     ],
   },
   {
-    id: 1,
+    id: 2,
     card_image: "aboutMe.jpg",
     title: "Work_Apalachicola",
     projectName: "Apalachicola Aquaculture",

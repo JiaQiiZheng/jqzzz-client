@@ -20,10 +20,10 @@ export default function loopLoadImages() {
   const url_arr = createImgSrcCode();
   const all = url_arr.map((img) => {
     let projectImgUrl = new URL(img, import.meta.url).href;
-    console.log(projectImgUrl);
     return (
       <Zoom>
-        <img src={projectImgUrl} alt="image" />
+        <pre>{projectImgUrl}</pre>
+        <img src={projectImgUrl} className="projectImg" alt="image" />
       </Zoom>
     );
   });
