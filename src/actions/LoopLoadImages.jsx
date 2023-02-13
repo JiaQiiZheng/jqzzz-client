@@ -22,8 +22,8 @@ export default function loopLoadImages() {
   const url_arr = createImgSrcCode();
   const all = url_arr.map((img) => {
     // let projectImgUrl = new URL(img, import.meta.url).href;
-    // console.log(projectImgUrl);
     const imageAssetPath = `/assets/${img}`;
+    console.log(imageAssetPath);
     return (
       <Zoom>
         <img src={imageAssetPath} alt="image" />
