@@ -21,12 +21,12 @@ function createImgSrcCode() {
 export default function loopLoadImages() {
   const url_arr = createImgSrcCode();
   const all = url_arr.map((img) => {
-    // let projectImgUrl = new URL(img, import.meta.url).href;
     const imageAssetPath = `/assets/${img}`;
-    console.log(imageAssetPath);
+    let projectImgUrl = new URL(imageAssetPath, import.meta.url).href;
+    console.log(projectImgUrl);
     return (
       <Zoom>
-        <img src={imageAssetPath} alt="image" />
+        <img src={projectImgUrl} alt="image" />
       </Zoom>
     );
   });
