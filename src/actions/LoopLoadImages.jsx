@@ -21,11 +21,7 @@ export default function loopLoadImages() {
   const all = url_arr.map((img) => {
     let projectImgUrl = new URL(img, import.meta.url).href;
     console.log(projectImgUrl);
-    return (
-      <Zoom>
-        <img src={projectImgUrl} alt="image" />
-      </Zoom>
-    );
+    return <img src={projectImgUrl} alt="image" />;
   });
 
   return all;
