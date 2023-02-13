@@ -1,7 +1,6 @@
 import React from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import testImg from "../images/works/Apalachicola_Aquaculture/compressed/A1_collage.jpg";
 
 const contextString = import.meta.glob([
   "/src/images/works/Apalachicola_Aquaculture/compressed/*.jpg",
@@ -12,8 +11,7 @@ function createImgSrcCode() {
   var imageUrl_arr = [];
   for (var path in contextString) {
     var imageUrl = new URL(path, import.meta.url).href;
-    const imageName = imageUrl.split("/").pop();
-    imageUrl_arr.push(imageName);
+    imageUrl_arr.push(imageUrl);
   }
   return imageUrl_arr;
 }
@@ -21,8 +19,7 @@ function createImgSrcCode() {
 export default function loopLoadImages() {
   const url_arr = createImgSrcCode();
   const all = url_arr.map((img) => {
-    const imageAssetPath = `/assets/${img}`;
-    let projectImgUrl = new URL(imageAssetPath, import.meta.url).href;
+    let projectImgUrl = new URL(img, import.meta.url).href;
     console.log(projectImgUrl);
     return (
       <Zoom>
